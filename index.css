@@ -1,0 +1,771 @@
+html,body{
+	height:1200px;
+	font-size:0px;
+	margin:0px;
+}
+.container{
+	width:100%;
+	height:100%;
+}
+.left{
+	width:100px;
+	height:100%;
+	background:rgb(29, 37, 49);
+	
+	float:left;
+}
+
+.right{
+	width:calc(100% - 350px);
+	height:100%
+}
+
+.left_icon_box{
+	position: fixed;
+	top:20px;
+	
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+	width:100px;
+	height:340px;
+}
+.left_top_icon{
+	display:block;
+	width:60px;
+	height:60px;
+	background:url(img/icon1.png) no-repeat 50% 50%,linear-gradient(to bottom,rgb(43, 159, 246),rgb(43, 159, 246));
+	/*background:url(img/icon2.png) no-repeat 50% 50%,linear-gradient(to bottom,rgb(149, 130, 227),rgb(149, 130, 227));*/
+	/*background:url(img/icon3.png) no-repeat 50% 50%,linear-gradient(to bottom,rgb(238, 77, 49),rgb(238, 77, 49));*/
+	/*background:url(img/icon4.png) no-repeat 50% 50%;border-radius:50%;border:1px solid rgb(44, 55, 71);*/
+	border-radius:50%;
+}
+
+.left_icon_box1{
+	width:100px;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	
+	position: fixed;
+	display:flex;
+	justify-content: center;	
+	align-items:center;
+	bottom:20px;
+}
+.left_bottom_icon{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	
+	background:url(img/icon5.png) no-repeat left top/contain;
+	/*background:url(img/icon6.png) no-repeat left top/contain;*/
+	opacity:0.3;
+	margin-right:15px;
+}
+
+/*中栏*/
+.middle{
+	width:250px;
+	height:100%;
+	background:rgb(34, 44, 60);
+	
+	float:left;
+	/*padding-top:20px;*/
+	/*？找出不影响中栏目高度而又是第一个标题有距离的方法*/
+	/*box-sizing:border-box;*/
+}
+.middle_container{
+	height:230px;
+	padding-top:20px;
+	
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.middle_title_box{
+	width:200px;
+	height:20px;
+	/*没有高度就没有内容吗？*/
+	position: relative;
+	
+	margin-bottom:10px;
+}
+.middle_title{
+	display: inline-block;
+	float:left;
+	
+	font-size:14px;
+	/*清了空格之后，需要在需要设置字体的地方直接重写，不可由上一届继承*/
+	color:#fff;
+	opacity: 0.5;
+	
+	position: absolute;
+	top:50%;
+	transform:translateY(-50%);
+}
+.middle_title_icon{
+	display: inline-block;
+	float:right;
+	width:20px;
+	height:20px;
+	
+	background:url(img/icon6.png) no-repeat 50% 50%;
+	opacity: 0.3;
+}
+
+.middle_text_box{
+	width:200px;
+	height:200px;
+	/*font-size、color是可以继承的*/
+	font-size:14px;
+	color:#fff;
+	border-bottom:1.5px solid rgb(41, 52, 70);
+	
+}
+.middle_text{
+	height:27px;
+	margin-bottom: 10px;
+}
+b{	
+	/*设置各文本垂直居中*/
+	font-weight:normal;
+	line-height:27px;
+	/*line-height为什么不能设置100%？*/
+}
+.middle_message_text{
+	height:27px;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	margin-bottom: 10px;
+}
+
+.middle_text2{
+	width:200px;
+	height:27px;
+	font-size:14px;
+	color:#fff;
+	
+	margin-bottom: 10px;
+	/*margin-left:20px;*/
+
+	display:flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+/*选中的激活样式，小三角*/
+/*?before好像是元素才能用的*/
+
+.middle_text2_before{
+	display: inline-block;
+	width:20px;
+	height:27px;
+	/*这里很无奈，因为align并不能是使那两个元素垂直居中*/
+	margin-right:5px;
+	background:url(img/middle_icon1.png) no-repeat 50% 50%;
+	/*background:url(img/middle_icon2.png) no-repeat 50% 50%;*/
+	/*background:url(img/middle_icon3.png) no-repeat 50% 50%;*/
+	/*background:url(img/middle_icon4.png) no-repeat 50% 50%;*/
+}
+/*蓝色的人数提示*/
+.middle_text_after1{
+	width:32px;
+	height:27px;
+	
+	text-align: center;
+	/*position:absolute;
+	top:50%;
+	transform: translateY(-50%);*/
+	
+	border-radius:13.5px;
+	background:rgb(43, 159, 246);
+}
+/*红色的警告*/
+.middle_text_after2{
+	float:right;
+	width:20px;
+	height:20px;
+	background:url(img/caution.png) no-repeat 50% 50%,linear-gradient(to bottom,rgb(229, 67, 39),rgb(229, 67, 39));
+	border-radius:50%;
+}
+
+.middle_bottom{
+	width:250px;
+	
+	position:fixed;
+	bottom:22px;
+}
+.middle_bottom_text_box{
+	width:200px;
+	color:#fff;
+	
+	margin-left:auto;
+	margin-right:auto;
+	
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+.middle_bottom_text{
+	font-size:14px;
+	display:inline-block;
+}
+.middle_bottom_line{
+	width:200px;
+	/*width:200px;*/
+	height:5px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	background:rgb(45, 56, 72);
+	border-radius:2.5px;
+}
+.middle_bottom_line1{
+	width:40px;
+	height:5px;
+	
+	background:linear-gradient(to right,rgb(128, 93, 230),rgb(154, 139, 227));
+	border-radius:2.5px;
+}
+
+/*右栏*/
+.right{
+	/*width:calc(100% - 350px);*/
+	/*width:100%;*/
+	height:100%;
+	font-size:14px;
+	color:rgb(118, 122, 131);
+	float:left;
+}
+.right_top1{
+	width:400px;
+	height:80px;
+	border-bottom:1.5px solid rgb(245, 246, 247);
+}
+.right_top_title{
+	display:inline-block;
+	/*?设了float之后,这个inline-block还需要吗*/
+	font-size:24px;
+	font-weight:bold;
+	line-height:80px;
+	padding-left:20px;
+	
+	display:float;
+}
+
+.right_top_right{
+	width:300px;
+	height:80px;
+	/*float:right;*/
+	display:flex;
+	justify-content: center;	
+	align-items: center;
+	
+	position: fixed;
+	top:0;
+	right:0;
+}
+.right_top_img_box{
+	width:58px;
+	height:58px;
+	margin-right:10px;
+	position:relative;
+}
+.right_top_img1{
+	width:58px;
+	height:58px;
+	background:url(img/Face2.png) no-repeat 50% 50%;
+}
+.right_top_img2{
+	width:20px;
+	height:20px;
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	background: url(img/Status2.png) no-repeat center center,linear-gradient(to right,rgb(255,255,255),rgb(255,255,255));
+	border-radius: 50%;
+}
+.right_top_text{
+	font-size:14px;
+	color:rgb(208, 208, 208);
+	line-height:1.5em;
+	margin-right:30px;
+}
+.right_top_right b{
+	font-weight:bold;
+	display: block;
+	font-size:16px;
+	color:rgb(48, 159, 241);
+	border-bottom:1.5px solid rgb(245, 246, 247);
+}
+.right_top_right:after{
+	content:'';
+	
+	width:20px;
+	height:20px;
+	display:block;
+	background:url(img/right_top.png) no-repeat 50% 50%;
+}
+
+/*左下栏*/
+.right_bottom_left{
+	/*不设置高度就默认跟随内容*/
+	height:1100px;
+	width:400px;
+	border-right:1.5px solid rgb(244, 245, 248);
+	/*right:float,right_bottom_left:float,right2:float*/
+	float:left;
+}
+
+/*左下栏的顶栏*/
+.right_bottom1{
+	width:400px;
+	/*height:*/
+	font-size:14px;
+}
+.right_bottom1_top{
+	width:400px;
+	height:70px;
+	/*border-right:1.5px solid rgb(244, 245, 248);*/
+	border-bottom:1.5px solid rgb(244, 245, 248);
+	border-left:1.5px solid rgb(244, 245, 248);
+	position:relative;
+}
+.right_bottom1_top_box{
+	width:340px;
+	height:35px;
+	/*17.5*/
+	border:1px solid rgb(244, 245, 248);
+	border-radius:5px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.right_bottom1_top_box b{
+	text-align: left;
+	font-weight: normal;
+	font-size:16px;
+	line-height: 35px;
+	padding-left:20px;
+}
+.right_bottom1_top_img{
+	width:20px;
+	height:20px;
+	/*10px*/
+	margin-top:7.5px;
+	/*?absolute定位出错*/
+	/*position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);*/
+	float:right;
+	margin-right:15px;
+	
+	background:url(img/search.png) no-repeat center center;
+}
+
+.right_intro_box{
+	box-sizing:border-box;
+	/*用flex的话，中间过宽，违反了亲密性*/
+	width:400px;
+	height:130px;
+	/*注意每个盒子都去改*/
+	border-left:3px solid rgb(37, 154, 242);
+	border-bottom:1.5px solid rgb(239, 241, 243);
+	/*display:flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	align-items: center;*/
+	position: relative;
+}
+.right_intro_inner{
+	width:350px;
+	height:90px;
+	/*？absolute不可使用margin:0 auto;*/
+	position: absolute;	
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+/*消息盒子上部*/
+.right_intro_box1{
+	width:350px;
+	height:50px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom:5px;
+}
+.right_intro_face{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:url(img/Face1.png) no-repeat center center;
+	
+	margin-right:20px;
+}
+.right_intro_name_container{
+	/*display:inline-block;*/
+	width:280px;
+	height:40px;
+	position:relative;
+}
+/*.right_intro_name_box{
+	width:280px;
+	height:16px;
+}*/
+.right_intro_name{
+	font-size:14px;
+	font-weight:bold;
+	color:rgb(84, 176, 243);
+	/*float:left;*/
+	position: absolute;
+	top:0;
+	left:0;
+}
+.right_intro_name:before{
+	content:'';
+	display: inline-block;
+	width:10px;
+	height:10px;
+	background-color:rgb(0, 170, 255);
+	border-radius:50%;
+	margin-right:5px;
+}
+.right_intro_time{
+	font-size:12px;
+	color:rgb(176, 186, 198);
+	/*float:right;*/
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.right_intro_tool{
+	font-size:12px;
+	color:rgb(198, 198, 198);
+	/*float:left;*/
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+/*消息盒子下部*/
+.right_intro_box2{
+	width:350px;
+	height:35px;
+	position:relative;
+}
+.right_intro_text{
+	width:310px;
+	height:35px;
+	line-height:1.5em;
+	
+	font-size:12px;
+	color:rgb(136, 140, 148);
+	margin-right:15px;
+}
+.right_intro_text:after{
+	content:'4';
+	text-align:center;
+	line-height: 25px;
+	width:25px;
+	height:25px;
+	/*垂直居中*/
+	
+	position:absolute;
+	right:0px;
+	top:50%;
+	transform:translateY(-50%);
+	display:inline-block;
+	font-size:14px;
+	color:#fff;
+	background-color:rgb(37, 154, 242);
+	border-radius: 50%;
+}
+
+/*普通盒子*/
+/*消息普通盒子上部*/
+.right_intro_face{
+	display:inline-block;
+	width:50px;
+	height:50px;
+	background:url(img/Face2.png) no-repeat center center;
+	/*每个盒子都不同*/
+
+	margin-right:20px;
+}
+.right_intro_name1{
+	font-size:14px;
+	font-weight:bold;
+	color:rgb(131, 133, 142);
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.right_intro_tool{
+	font-size:12px;
+	color:rgb(198, 198, 198);
+	/*float:left;*/
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+/*消息盒子下部*/
+
+.right_intro_text1{
+	width:350px;
+	height:35px;
+	line-height:1.5em;
+	
+	font-size:12px;
+	color:rgb(136, 140, 148);
+	margin-right:15px;
+}
+
+/*右侧-右栏*/
+.right_right2{
+	width:calc(100% - 405px);
+	float:left;
+	height:1100px;
+}
+/*右栏顶栏*/
+.right2_top{
+	display: inline-block;
+	width:100%;
+	height:70px;
+	border-top:1.5px solid rgb(236, 238, 240);	
+	margin-top:80px;
+	
+	position: relative;
+}
+.right2_top_title{
+	display: inline-block;
+	font-size:18px;
+	line-height:70px;
+	margin-left:20px;
+}
+.right2_top_title:after{
+	content: '';
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background-color:rgb(27, 185, 52);
+	margin-left:10px;
+}
+/*顶栏右侧的集合*/
+.right2_top_box{
+	width:350px;
+	display:flex;
+	justify-content: space-around;
+	align-items:center;
+	
+	position: absolute;
+	top:50%;
+	transform:translateY(-50%);
+	right:0px;
+}
+.right2_top_icon_box{
+	display: inline-block;
+	width:120px;
+	height:30px;
+	border:1px solid rgb(167, 176, 191);
+	border-radius:5px;
+	
+	display:flex;
+	justify-content: space-around;
+	
+}
+.right2_top_icon{
+	display:inline-block;
+	width:35px;
+	height:30px;
+	background:url(img/right_top_icon1.png) no-repeat center center;
+	border-right:1px solid rgb(167, 176, 191);
+	/*后一个回退的是不是也能用icon做？*/
+}
+
+/*右栏-右侧-底栏*/
+.right2_bottom{
+	display: inline-block;
+	height:700px;
+	width:100%;
+	border-top:1.5px solid rgb(236, 238, 240);	
+	/*position: relative;*/
+}
+.right2_bottom_container{
+	width:100%;
+	height:315px;
+	font-size:14px;
+	color:#000;
+	border-bottom:1.5px solid rgb(236, 237, 241);
+	/*flex并不是最佳的选择，时常会出现难以调整的问题*/
+	/*display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items:center;*/
+	position:relative;
+}
+/*用于外层水平,垂直居中*/
+.right2_bottom_inner{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+/*文章块*/
+.right2_bottom_inner1{
+	width:600px;
+	height:85px;
+	position:relative;
+	font-size:14px;
+}
+/*文章块-标题*/
+.right2_bottom_title{
+	display:inline-block;
+	font-weight:bold;
+	margin-right:5px;
+	margin-left:60px;
+	margin-bottom:10px;
+}
+/*文章块-文本*/
+.right2_bottom_text{
+	display:inline-block;
+	width:550px;
+	margin-left:60px;
+	line-height:1.5em;
+}
+/*文章块-图片*/
+.right2_bottom_inner1:before{
+	content:'';
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(img/Face1.png) no-repeat center center;
+	margin-right:10px;
+	position:absolute;
+	/*top:50%;
+	transform: translateY(-50%);*/
+}
+.right2_bottom_inner2:before{
+	content:'';
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(img/Face2.png) no-repeat center center;
+	margin-right:10px;
+	position:absolute;
+	/*top:50%;
+	transform: translateY(-50%);*/
+}
+.right2_bottom2_text{
+	position:absolute;
+	width:100px;
+	text-align: center;
+	font-size:14px;
+	bottom:0px;
+	left:50%;
+	transform:translate(-50%,50%);
+	background-color:#fff;
+	/*第二个块需要蓝色的线*/
+	/*color: rgb(175, 218, 249);*/
+}
+/*第二块-有图片的*/
+.right2_bottom2_img{
+	display:inline-block;
+	width:158px;
+	height:100px;
+	background:url(img/photo1.png) no-repeat center center;
+	margin-right:20px;
+	margin-left:60px;
+	/*需要让第二个元素重写margin-right*/
+	border-radius: 10px;
+	position: relative;
+}
+.right2_bottom2_button{
+	width:50px;
+	height:50px;
+	background:url(img/photo3.png) no-repeat 50% 50%,linear-gradient(to bottom,rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+	border-radius:50%;
+	
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+
+/*第三块*/
+/*定位盒*/
+.right2_bottom_extra_box{
+	position: relative;
+}
+.right2_bottom_extra{
+	display: inline-block;
+	width:540px;
+	height:50px;
+	font-size:14px;
+	/*border-top:1px solid rgb(213, 214, 223);
+	border-bottom:1px solid rgb(213, 214, 223);
+	border-right:1px solid rgb(213, 214, 223);*/
+	border:1px solid rgb(213, 214, 223);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius:5px;
+	
+	padding-left:60px;
+}
+.right2_bottom_extra:before{
+	content:'';
+	display:block;
+	width:50px;
+	height:50px;
+	background:url(img/add.png) no-repeat center center;
+	margin-right:10px;
+	position:absolute;
+	left:0px;
+	
+	/*border:1px solid rgb(213, 214, 223);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius:5px;*/
+	border-right:1px solid rgb(213, 214, 223);
+}
+.right2_bottom_extra b{
+	display: inline-block;
+	font-weight: normal;
+	text-align: center;
+	line-height:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
